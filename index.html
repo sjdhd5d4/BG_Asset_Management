@@ -1426,7 +1426,7 @@ function renderNotifications() {
 
 function renderKPIPage() {
   const el=document.getElementById('kpiDetailCards'); if(!el) return;
-  el.innerHTML=`<div style="background:rgba(234,88,12,.06);border:1px solid rgba(234,88,12,.2);border-radius:10px;padding:11px 15px;margin-bottom:16px;font-size:13px;color:#ea580c"><i class="bi bi-info-circle-fill"></i> KPI is calculated only for employees (Saqib, Afaq, Tayyab) on tasks where <strong>KPI Applicable = Yes</strong>. Bosses' tasks are excluded.</div>
+  el.innerHTML=`<div style="background:rgba(234,88,12,.06);border:1px solid rgba(234,88,12,.2);border-radius:10px;padding:11px 15px;margin-bottom:16px;font-size:13px;color:#ea580c"><i class="bi bi-info-circle-fill"></i> KPI is calculated only for employees (Saqib, Afaq, Tayyab) on tasks where <strong>KPI Applicable = Yes</strong>.</div>
   <div class="emp-kpi-grid">${EMPLOYEES.map(emp=>{
     const k=calcKPI(emp); const c=EMP_COLORS[emp]; const et=getKPITasks(emp);
     return `<div class="emp-kpi-card"><div class="emp-kpi-header"><div class="emp-avatar" style="background:${EMP_AVBG[emp]}">${emp[0]}</div><div><div class="emp-name">${emp}</div><div class="emp-role">KPI Score: <strong style="color:${c}">${k.score}%</strong></div></div></div>
